@@ -9,6 +9,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+
+}
+
+.movies::-webkit-scrollbar {
+  display: none;
+}
+body::-webkit-scrollbar {
+  display: none;
 }
 
 code {
@@ -19,4 +28,24 @@ code {
 /* Define a custom class to target autofill */
 .autofill-bg-transparent:-webkit-autofill {
   background-color: transparent !important;
+}
+
+
+/* //spinner */
+.spinner{
+  height: 60px;
+  width: 60px;
+  border: 6px solid black;
+  border-top-color: rgb(234, 1, 1);
+  border-radius: 50%;
+  animation:spin 1s linear infinite ;
+}
+
+@keyframes spin{
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
