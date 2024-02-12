@@ -79,12 +79,12 @@ const handleLangChange = (e)=>{
           )}
         </select>
       }
-      <div className='flex '>
+     { user ? <div className='flex '>
         <button onClick={handleGptSearch} className='text-white font-bold rounded-md  m-[13.2px] px-2 bg-green-700 bg-opacity-60 border' >
 
       {toggleResult ? 'HomePage' : 'GptSearch'}
         </button>
-      </div>
+      </div> : null}
           {user ?          
           <span className='flex mr-2 cursor-pointer flex-col justify-center text-center font-bold text-lg'>
           <h1 onClick={handleprofile} className=' bg-red-600 cursor-pointer text-white bg-opacity-60 border py-[5.4px] px-3 rounded-md'>{user.displayName}↓</h1>
